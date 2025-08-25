@@ -1,0 +1,33 @@
+<div class="container">
+
+
+  <!-- Séparateur -->
+  <div class="divider"></div>
+
+  <!-- Cartes de statistiques -->
+  <div class="stats-cards">
+    <div class="stat-card">
+      <div class="stat-title">Total utilisateurs</div>
+      <div class="stat-number">{{ stats.totalUsers }}</div>
+      <div class="stat-label">Enregistrés</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-title">Présents cette semaine</div>
+      <div class="stat-number">{{ stats.presentThisWeek }}</div>
+      <div class="stat-label">Au moins 1 jour</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-title">&gt; 2 jours/semaine</div>
+      <div class="stat-number">{{ stats.regularUsers }}</div>
+      <div class="stat-label">Réguliers</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-title">Conformes planning</div>
+      <div class="stat-number">{{ stats.compliantUsers }}</div>
+      <div class="stat-label">Jeux déclarés</div>
+    </div>
+  </div>
+</div>

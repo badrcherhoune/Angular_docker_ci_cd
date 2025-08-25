@@ -1,0 +1,109 @@
+/* filter-header.component.css */
+.filter-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-field, .search-field {
+  min-width: 180px;
+  flex: 1;
+}
+
+.search-field {
+  flex: 2;
+}
+
+.filter-button, .download-button {
+  flex-shrink: 0;
+}
+
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3f51b5;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #666;
+  text-align: center;
+}
+
+/* Optimisations CSS globales */
+.filter-header {
+  display: block;
+}
+
+/* Media Queries pour la responsivité */
+@media (max-width: 768px) {
+  .filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-field, .search-field {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .filter-button, .download-button {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Version alternative avec les media queries regroupées */
+@media (max-width: 768px) {
+  .filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-field, .search-field {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .filter-button, .download-button {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}

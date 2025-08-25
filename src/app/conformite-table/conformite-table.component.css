@@ -1,0 +1,54 @@
+.table-container {
+  padding: 1rem;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.full-width-table {
+  width: 100%;
+}
+
+.avatar {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #f1f3f4;
+  font-weight: bold;
+}
+
+.declared-day {
+  margin-right: 4px;
+  color: #777;
+}
+
+mat-icon.ok {
+  color: green;
+}
+
+mat-icon.nok {
+  color: red;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.badge.conforme {
+  background: #4caf50;
+}
+
+.badge.partiel {
+  background: #ff9800;
+}
+
+.badge.non-conforme {
+  background: #f44336;
+}

@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>Vue hebdomadaire</mat-card-title>
+  
+  <div *ngFor="let day of weekData" class="day-row">
+    <div class="date">
+      <mat-icon>calendar_today</mat-icon>
+      {{ day.date }}
+    </div>
+    <div class="attendance">
+      <span class="present"> {{ day.presents }} présents</span>
+      <span class="absent">{{ day.absents }} absents</span>
+    </div>
+  </div>
+</mat-card>

@@ -1,0 +1,134 @@
+/* 🌟 Carte principale */
+mat-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  max-width: 450px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+mat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* 🏷️ Titre */
+mat-card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  text-align: center;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* 📅 Ligne de jour */
+.day-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  position: relative;
+  transition: background-color var(--transition-speed);
+}
+
+/* 🧩 Bordure entre lignes */
+.day-row:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--border-color);
+  opacity: 0.4;
+  transition: opacity var(--transition-speed);
+}
+
+.day-row:hover {
+  background-color: rgba(25, 118, 210, 0.05);
+  border-radius: 6px;
+}
+
+.day-row:hover::after {
+  opacity: 0.7;
+}
+
+/* 📆 Date */
+.date {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.date mat-icon {
+  font-size: 1.1rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* 👥 Présence */
+.attendance {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.attendance .present {
+  color: var(--success-color);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.attendance .absent {
+  color: var(--error-color);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.attendance span::before {
+  content: '';
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+  mat-card {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .day-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  .attendance {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .day-row:not(:last-child)::after {
+    left: 0;
+    right: 0;
+    background-color: var(--border-color);
+    opacity: 0.3;
+  }
+}
