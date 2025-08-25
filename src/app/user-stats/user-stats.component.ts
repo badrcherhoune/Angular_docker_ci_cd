@@ -10,18 +10,4 @@ export class UserStatsComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  selectedPeriod: string = 'Cette semaine';
-  selectedSector: string = 'Tous les secteurs';
-  selectedCompliance: string = 'Tous';
-  
-  periods: string[] = ['Cette semaine', 'Ce mois', 'Ce trimestre'];
-  sectors: string[] = ['Tous les secteurs', 'Secteur A', 'Secteur B', 'Secteur C'];
-  compliances: string[] = ['Tous', 'Conformes', 'Non conformes'];
-  
-  stats = {
-    totalUsers: 1250,
-    presentThisWeek: 843,
-    regularUsers: 621,
-    compliantUsers: 589
-  };
 }
