@@ -38,11 +38,11 @@ jobs:
 
       # 6. Build Docker image
       - name: Build Docker image
-        run: docker build -t yourdockerhubusername/application-ci:latest .
+        run: docker build -t badrcherhoune/application-ci:latest .
 
       # 7. Push Docker image
       - name: Push Docker image
-        run: docker push yourdockerhubusername/application-ci:latest
+        run: docker push badrcherhoune/application-ci:latest
 
       # 8. (Optionnel) Déployer sur serveur distant via SSH
       - name: Deploy to server
@@ -52,7 +52,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            docker pull yourdockerhubusername/application-ci:latest
+            docker pull badrcherhoune/application-ci:latest
             docker stop application-ci || true
             docker rm application-ci || true
-            docker run -d -p 4200:4000 --name application-ci yourdockerhubusername/application-ci:latest
+            docker run -d -p 4200:4000 --name application-ci badrcherhoune/application-ci:latest
